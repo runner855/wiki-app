@@ -1,0 +1,8 @@
+/* .nav_container {
+  background-color: red;
+  
+} */
+.nav li {
+  display: flex;
+  list-style: none;
+}

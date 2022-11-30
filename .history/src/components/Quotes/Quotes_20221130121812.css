@@ -1,0 +1,10 @@
+.author_image {
+  border-radius: 1em;
+  height: 5em;
+}
+
+.quote_text {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  hyphens: auto;
+}

@@ -1,0 +1,9 @@
+.author_image {
+  border-radius: 1em;
+  height: 5em;
+}
+
+.quotes_container {
+  flex-wrap: wrap;
+  align-content: center;
+}

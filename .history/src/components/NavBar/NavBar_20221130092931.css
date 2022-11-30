@@ -1,0 +1,5 @@
+.nav_container li {
+  list-style: none;
+  justify-content: space-around;
+  display: inline;
+}

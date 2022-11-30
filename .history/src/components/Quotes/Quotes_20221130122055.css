@@ -1,0 +1,9 @@
+.author_image {
+  border-radius: 1em;
+  height: 5em;
+}
+
+.quote_text {
+  overflow-wrap: break-word;
+  flex-wrap: wrap;
+}

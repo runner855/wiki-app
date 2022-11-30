@@ -1,0 +1,60 @@
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+.header {
+  height: 20vh;
+  background-color: #edebeb;
+  padding: 1.5rem;
+  position: relative;
+
+  &__nav {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 4rem 5rem;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 100;
+    width: 100%;
+    transition: 0.6s;
+  }
+
+  &__list {
+    list-style: none;
+    display: flex;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 5rem;
+    }
+  }
+
+  &__link {
+    font-size: 1.6rem;
+    color: #00315c;
+    font-weight: 400;
+    text-decoration: none;
+
+    &:hover {
+      font-weight: 600;
+      transition: all 0.3s;
+    }
+  }
+}

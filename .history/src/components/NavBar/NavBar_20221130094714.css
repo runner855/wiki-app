@@ -1,0 +1,13 @@
+.nav_container {
+  list-style: none;
+  margin: 2px;
+  padding: 3px;
+  background-color: aquamarine;
+}
+
+.nav_container li {
+  float: left;
+  padding: 10px;
+  text-align: center;
+  margin-left: 5px;
+}
