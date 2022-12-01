@@ -1,0 +1,11 @@
+.title {
+  text-align: left;
+  margin-top: 1em;
+  margin-left: 1em;
+  font-size: 2em;
+  font-weight: 800;
+}
+
+.card {
+  background-color: rgb(226, 168, 33);
+}

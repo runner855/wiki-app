@@ -1,0 +1,32 @@
+.title {
+  text-align: left;
+  margin-top: 1em;
+  margin-left: 1em;
+  font-size: 2em;
+  font-weight: 800;
+}
+
+.search_input {
+  margin-left: 1.8em;
+  margin-top: 2em;
+}
+
+input {
+  width: 15em;
+  height: 2em;
+  padding: 0.9em;
+  border-radius: 1em;
+  border: solid 0.2em rgb(226, 168, 33);
+}
+
+input:focus {
+  outline: none !important;
+}
+
+.card {
+  background-color: rgb(226, 168, 33);
+}
+
+.data_container {
+  text-align: center;
+}
