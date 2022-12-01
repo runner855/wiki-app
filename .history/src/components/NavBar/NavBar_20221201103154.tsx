@@ -19,11 +19,9 @@ export const NavBar = () => {
           </li>
         );
       })}
-      <div className="switch">
-        {LanguageEnum.IT}
-        <Switch defaultChecked onChange={onChange} className="switch_element" />
-        {LanguageEnum.EN}
-      </div>
+      {LanguageEnum.IT}
+      <Switch defaultChecked onChange={onChange} />
+      {LanguageEnum.EN}
     </ul>
   );
 };

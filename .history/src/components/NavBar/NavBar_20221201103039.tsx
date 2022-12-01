@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import { NavElements } from "../../Utilities/utility";
 import "../NavBar/NavBar.css";
 import { Switch } from "antd";
-import { LanguageEnum } from "../../types/Apptypes";
 
 export const NavBar = () => {
   const onChange = (checked: boolean) => {
@@ -19,11 +18,7 @@ export const NavBar = () => {
           </li>
         );
       })}
-      <div className="switch">
-        {LanguageEnum.IT}
-        <Switch defaultChecked onChange={onChange} className="switch_element" />
-        {LanguageEnum.EN}
-      </div>
+      <Switch defaultChecked onChange={onChange} />
     </ul>
   );
 };

@@ -1,14 +1,14 @@
 export enum AppUrls  {
-    QUOTES = "/quotes",
-    AUTHORS = "/authors",
+    COLLAPSE = "/quotes",
+    SELECT = "/select",
     SEARCH = "/search",
     TRANSLATE = "/translate"
     
 }
 
 export enum  LanguageEnum {
-    IT = "IT",
-    EN = "EN"
+    IT = "it",
+    EN = "en"
 }
 
 export const languages : LanguageEnum = LanguageEnum.EN;

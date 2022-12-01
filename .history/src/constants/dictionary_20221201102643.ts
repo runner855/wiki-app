@@ -18,8 +18,8 @@ export const TRANSLATE_LABEL: Label = {
 
 
 export const SELECT_LABEL: Label = {
-    en: "Authors",
-    it: "Autori"
+    en: "Select",
+    it: "Seleziona"
 }
 
 export const  QUOTE_CONTENT_ONE: Label = {

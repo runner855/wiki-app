@@ -20,8 +20,8 @@ import {
 export const NavElements = 
    
     [
-      { nav_element: QUOTES_LABEL.en, to: AppUrls.QUOTES },
-      { nav_element: SELECT_LABEL.en, to: AppUrls.AUTHORS },
+      { nav_element: QUOTES_LABEL.en, to: AppUrls.COLLAPSE },
+      { nav_element: SELECT_LABEL.en, to: AppUrls.SELECT },
       { nav_element: SEARCH_LABEL.en, to: AppUrls.SEARCH },
       { nav_element: TRANSLATE_LABEL.en, to: AppUrls.TRANSLATE },
       

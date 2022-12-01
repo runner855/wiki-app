@@ -18,8 +18,8 @@ export const TRANSLATE_LABEL: Label = {
 
 
 export const SELECT_LABEL: Label = {
-    en: "Authors",
-    it: "Autori"
+    en: "Select",
+    it: "Seleziona"
 }
 
 export const  QUOTE_CONTENT_ONE: Label = {
@@ -61,8 +61,8 @@ export const QUOTE_IMAGE_TWO: Label = {
 }
 
 export const QUOTE_IMAGE_THREE: Label = {
-    en:"https://images.gr-assets.com/authors/1596216614p2/1077326.jpg",
-    it:"https://images.gr-assets.com/authors/1596216614p2/1077326.jpg"
+    en:"https://images.gr-assets.com/authors/1521044377p2/3565.jpg",
+    it:"https://images.gr-assets.com/authors/1521044377p2/3565.jpg"
 }
 
 export const languages : LanguageEnum = LanguageEnum.EN;

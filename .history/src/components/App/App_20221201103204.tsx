@@ -3,9 +3,9 @@ import { Route, Routes } from "react-router-dom";
 import { Quotes } from "../Quotes/Quotes";
 import { NavBar } from "../NavBar/NavBar";
 import { Search } from "../Search/Search";
+import { Select } from "../Select/Select";
 import { Translate } from "../Translate/Translate";
 import "./App.css";
-import { Authors } from "../Authors/Authors";
 
 function App() {
   return (
@@ -14,7 +14,7 @@ function App() {
       <NavBar />
       <Routes>
         <Route path="/quotes" element={<Quotes />} />
-        <Route path="/authors" element={<Authors />} />
+        <Route path="/select" element={<Select />} />
         <Route path="/search" element={<Search />} />
         <Route path="/translate" element={<Translate />} />
       </Routes>

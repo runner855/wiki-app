@@ -21,7 +21,7 @@ export const NavBar = () => {
       })}
       <div className="switch">
         {LanguageEnum.IT}
-        <Switch defaultChecked onChange={onChange} className="switch_element" />
+        <Switch defaultChecked onChange={onChange} />
         {LanguageEnum.EN}
       </div>
     </ul>

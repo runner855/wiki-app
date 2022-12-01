@@ -1,6 +1,6 @@
 export enum AppUrls  {
     QUOTES = "/quotes",
-    AUTHORS = "/authors",
+    AUTHORS = "/select",
     SEARCH = "/search",
     TRANSLATE = "/translate"
     
