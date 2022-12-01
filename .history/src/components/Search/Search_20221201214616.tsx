@@ -45,7 +45,7 @@ export const Search = () => {
                 <p>{moment(item.timestamp).format("LL")}</p>
 
                 <a href={`https://en.wikipedia.org?curid=${item.pageid}`}>
-                  <button className="article">View Article</button>
+                  <button>View Article</button>
                 </a>
               </Card>
             );

@@ -43,9 +43,12 @@ export const Search = () => {
               <Card className="card" title={item.title} bordered={false}>
                 <p>{item.snippet.replace(/<\/?span[^>]*>/g, "")}</p>
                 <p>{moment(item.timestamp).format("LL")}</p>
-
+                <Link to={`https://en.wikipedia.org?curid=${item.pageid}`}>
+                  {" "}
+                  <button>View Article</button>
+                </Link>
                 <a href={`https://en.wikipedia.org?curid=${item.pageid}`}>
-                  <button className="article">View Article</button>
+                  <button>View Article</button>
                 </a>
               </Card>
             );

@@ -24,15 +24,9 @@
 }
 
 .article {
-  background: rgb(226, 168, 33);
-  border-radius: 2em;
-  width: 8em;
-  font-weight: 800;
-  padding: 0.2em;
-  border: solid black 0.1em;
+  background: red;
 }
 
 .article:hover {
   cursor: pointer;
-  color: white;
 }
