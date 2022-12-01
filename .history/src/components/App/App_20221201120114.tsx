@@ -1,5 +1,5 @@
 import React from "react";
-import { Navigate, Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import { Quotes } from "../Quotes/Quotes";
 import { NavBar } from "../NavBar/NavBar";
 import { Search } from "../Search/Search";
@@ -13,7 +13,7 @@ function App() {
       <h1>Wiki App</h1>
       <NavBar />
       <Routes>
-        <Route path="/" element={<Navigate to="/quotes" />} />
+        <Route path="/" element={<Navigete to="/quotes" />} />
         <Route path="/quotes" element={<Quotes />} />
         <Route path="/authors" element={<Authors />} />
         <Route path="/search" element={<Search />} />

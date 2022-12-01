@@ -11,11 +11,7 @@ export const Authors = () => {
   return (
     <div className="container">
       <div className="select">
-        <Select
-          style={{ width: 240 }}
-          defaultValue="Select an Author"
-          onChange={handleChange}
-        >
+        <Select style={{ width: 220 }}>
           {QuoteTexts.map((item, index) => {
             return <option>{item.author_name.en}</option>;
           })}

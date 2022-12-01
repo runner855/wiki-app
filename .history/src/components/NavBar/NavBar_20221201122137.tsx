@@ -6,25 +6,29 @@ import { Switch } from "antd";
 import { LanguageEnum } from "../../types/Apptypes";
 
 export const NavBar = () => {
-  const [language, setLanguage] = useState<boolean>(true);
+  const [language, setLanguage] = useState<string>("");
 
   const onChange = (checked: boolean) => {
-    setLanguage(checked);
+    console.log(`switch to ${checked}`);
+    setLanguage(language);
   };
 
   return (
     <ul className="nav_container">
-      {NavElements.map((item, index) => {
-        return (
-          <li>
-            <Link to={item.to}>
-              {language
-                ? item.nav_element.en
-                : item.nav_element.it || item.nav_element.en}
-            </Link>
-          </li>
-        );
-      })}
+      {language &&
+        NavElements.map((item, index) => {
+          return (
+            (
+              <li>
+                <Link to={item.to}>{item.nav_element.en}</Link>
+              </li>
+            ) || (
+              <li>
+                <Link to={item.to}>{item.nav_element.it}</Link>
+              </li>
+            )
+          );
+        })}
       <div className="switch">
         {LanguageEnum.IT}
         <Switch defaultChecked onChange={onChange} className="switch_element" />

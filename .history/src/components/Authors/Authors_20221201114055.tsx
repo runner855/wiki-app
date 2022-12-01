@@ -12,7 +12,7 @@ export const Authors = () => {
     <div className="container">
       <div className="select">
         <Select
-          style={{ width: 240 }}
+          style={{ width: 220 }}
           defaultValue="Select an Author"
           onChange={handleChange}
         >

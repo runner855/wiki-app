@@ -9,6 +9,7 @@ export const NavBar = () => {
   const [language, setLanguage] = useState<boolean>(true);
 
   const onChange = (checked: boolean) => {
+    console.log(`switch to ${checked}`);
     setLanguage(checked);
   };
 

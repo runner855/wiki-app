@@ -6,10 +6,10 @@ import { Switch } from "antd";
 import { LanguageEnum } from "../../types/Apptypes";
 
 export const NavBar = () => {
-  const [language, setLanguage] = useState<boolean>(true);
+  const [language, setLanguage] = useState<string>("");
 
   const onChange = (checked: boolean) => {
-    setLanguage(checked);
+    console.log(`switch to ${checked}`);
   };
 
   return (
@@ -17,11 +17,7 @@ export const NavBar = () => {
       {NavElements.map((item, index) => {
         return (
           <li>
-            <Link to={item.to}>
-              {language
-                ? item.nav_element.en
-                : item.nav_element.it || item.nav_element.en}
-            </Link>
+            <Link to={item.to}>{item.nav_element}</Link>
           </li>
         );
       })}

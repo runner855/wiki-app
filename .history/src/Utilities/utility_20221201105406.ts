@@ -23,10 +23,10 @@ import {
 export const NavElements = 
    
     [
-      { nav_element: QUOTES_LABEL, to: AppUrls.QUOTES },
-      { nav_element: SELECT_LABEL, to: AppUrls.AUTHORS },
-      { nav_element: SEARCH_LABEL, to: AppUrls.SEARCH },
-      { nav_element: TRANSLATE_LABEL, to: AppUrls.TRANSLATE },
+      { nav_element: QUOTES_LABEL.en, to: AppUrls.QUOTES },
+      { nav_element: SELECT_LABEL.en, to: AppUrls.AUTHORS },
+      { nav_element: SEARCH_LABEL.en, to: AppUrls.SEARCH },
+      { nav_element: TRANSLATE_LABEL.en, to: AppUrls.TRANSLATE },
       
     ]
 
@@ -47,7 +47,7 @@ export const NavElements =
         quote_title: QUOTE_TITLE_THREE,
         quote_content: QUOTE_CONTENT_THREE.en, 
         author_image: QUOTE_IMAGE_THREE,
-        author_name: AUTHOR_THREE 
+        author_name: AUTHOR_THREE
       }
     ]
 

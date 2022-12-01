@@ -6,10 +6,11 @@ import { Switch } from "antd";
 import { LanguageEnum } from "../../types/Apptypes";
 
 export const NavBar = () => {
-  const [language, setLanguage] = useState<boolean>(true);
+  const [language, setLanguage] = useState<string>("");
 
   const onChange = (checked: boolean) => {
-    setLanguage(checked);
+    console.log(`switch to ${checked}`);
+    setLanguage(language);
   };
 
   return (
