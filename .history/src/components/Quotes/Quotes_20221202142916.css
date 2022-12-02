@@ -6,7 +6,7 @@
 
 .quotes_container {
   flex-wrap: wrap;
-  text-align: center;
+  align-content: center;
 }
 
 .quote_text {

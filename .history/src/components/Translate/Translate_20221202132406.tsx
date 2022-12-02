@@ -15,7 +15,7 @@ export const Translate = () => {
   const [result, setResult] = useState<ResultProps[]>();
 
   const handleChange = (value: string) => {
-    console.log(`selected ${value}`);
+    // console.log(`selected ${value}`);
   };
 
   const handleInput = (e: {
@@ -46,7 +46,10 @@ export const Translate = () => {
           options={TranslateLanguages}
         ></Select>
       </div>
-      <div className="data">Text to display</div>
+      {result &&
+        result.map((item, index) => {
+          return <div>text</div>;
+        })}
     </div>
   );
 };

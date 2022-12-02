@@ -46,7 +46,7 @@ export const Translate = () => {
           options={TranslateLanguages}
         ></Select>
       </div>
-      <div className="data">Text to display</div>
+      text
     </div>
   );
 };

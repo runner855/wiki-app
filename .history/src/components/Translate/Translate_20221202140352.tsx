@@ -9,6 +9,8 @@ type ResultProps = {
   detectedSourceLanguage: string;
 };
 
+const API_KEY = process.env.REACT_APP_API_KEY;
+
 export const Translate = () => {
   const [word, setWord] = useState<string>("");
   const [translate, setTranslate] = useState<string>("");
@@ -46,7 +48,7 @@ export const Translate = () => {
           options={TranslateLanguages}
         ></Select>
       </div>
-      <div className="data">Text to display</div>
+      text
     </div>
   );
 };

@@ -5,8 +5,7 @@
 }
 
 .quotes_container {
-  flex-wrap: wrap;
-  text-align: center;
+  display: flex;
 }
 
 .quote_text {
@@ -24,4 +23,8 @@
 svg {
   font-weight: 800;
   font-size: 1.2em;
+}
+
+.ant-collapse {
+  width: 50em;
 }

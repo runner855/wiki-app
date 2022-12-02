@@ -9,7 +9,7 @@
 .card {
   background-color: rgb(226, 168, 33);
   border: solid black 0.2em;
-  width: 50%;
+  width: 70%;
   margin: 2em;
 }
 
@@ -41,9 +41,6 @@
 .content,
 .date {
   font-size: 2em;
-  line-height: 1.3;
-  width: 600px;
-  padding: 10px;
 }
 
 .ant-card-head-title {

@@ -4,18 +4,13 @@ import TranslateCall from "../../SearchApi/TranslateCall";
 import { TranslateLanguages } from "../../Utilities/utility";
 import "../Translate/Translate.css";
 
-type ResultProps = {
-  translatedText: string;
-  detectedSourceLanguage: string;
-};
-
 export const Translate = () => {
   const [word, setWord] = useState<string>("");
   const [translate, setTranslate] = useState<string>("");
-  const [result, setResult] = useState<ResultProps[]>();
+  const [result, setResult] = useState<string>("");
 
   const handleChange = (value: string) => {
-    console.log(`selected ${value}`);
+    // console.log(`selected ${value}`);
   };
 
   const handleInput = (e: {
@@ -29,7 +24,8 @@ export const Translate = () => {
       `${word}&target=it&key=AIzaSyCHUCmpR7cT_yDFHC98CZJy2LTms-IwDlM`,
       {}
     ).then((res) => {
-      setResult(res.data.data);
+      setResult(res.data.data.translations);
+      console.log("res", result);
     });
   }, [word]);
 
@@ -46,7 +42,7 @@ export const Translate = () => {
           options={TranslateLanguages}
         ></Select>
       </div>
-      <div className="data">Text to display</div>
+      <h1>{result[0]}</h1>
     </div>
   );
 };

@@ -12,10 +12,10 @@ type ResultProps = {
 export const Translate = () => {
   const [word, setWord] = useState<string>("");
   const [translate, setTranslate] = useState<string>("");
-  const [result, setResult] = useState<ResultProps[]>();
+  const [result, setResult] = useState();
 
   const handleChange = (value: string) => {
-    console.log(`selected ${value}`);
+    // console.log(`selected ${value}`);
   };
 
   const handleInput = (e: {
@@ -30,6 +30,7 @@ export const Translate = () => {
       {}
     ).then((res) => {
       setResult(res.data.data);
+      console.log("res", result);
     });
   }, [word]);
 
@@ -46,7 +47,7 @@ export const Translate = () => {
           options={TranslateLanguages}
         ></Select>
       </div>
-      <div className="data">Text to display</div>
+      <h1>hello</h1>
     </div>
   );
 };
