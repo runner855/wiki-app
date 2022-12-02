@@ -2,6 +2,6 @@
   margin: 5em 0em 0em 7em;
 }
 
-.ant-select-selector:hover {
+.ant-select-selector:focus {
   outline: none;
 }

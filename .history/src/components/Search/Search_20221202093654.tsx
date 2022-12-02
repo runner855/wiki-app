@@ -4,6 +4,7 @@ import { WikiDataProps } from "../../types/Apptypes";
 import { Card } from "antd";
 import moment from "moment";
 import "../Search/Search.css";
+import { Link } from "react-router-dom";
 import { FilterSearch } from "../FilterSearch/FilterSearch";
 import { SEARCH_PAGE_TITLE } from "../../constants/dictionary";
 

@@ -6,7 +6,6 @@ import { Search } from "../Search/Search";
 import { Translate } from "../Translate/Translate";
 import "./App.css";
 import { Authors } from "../Authors/Authors";
-
 const App = () => {
   return (
     <div className="App">

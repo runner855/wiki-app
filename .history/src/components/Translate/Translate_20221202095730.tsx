@@ -1,48 +1,36 @@
 import { Select } from "antd";
 import React, { useEffect, useState } from "react";
 import TranslateCall from "../../SearchApi/TranslateCall";
-import { TranslateLanguages } from "../../Utilities/utility";
 import "../Translate/Translate.css";
 
 export const Translate = () => {
-  const [word, setWord] = useState<string>("");
-  const [selectedLanguage, setSelectedLanguage] = useState("");
-
+  console.log(process.env.REACT_APP_API_KEY);
+  const [word, setWord] = useState();
   const handleChange = (value: string) => {
-    // console.log(`selected ${value}`);
-    setSelectedLanguage(value);
-    console.log(selectedLanguage);
-  };
-
-  const handleInput = (e: {
-    target: { value: React.SetStateAction<string> };
-  }) => {
-    setWord(e.target.value);
+    console.log(`selected ${value}`);
   };
 
   useEffect(() => {
     TranslateCall.get(
-      `${word}&target=it&key=AIzaSyCHUCmpR7cT_yDFHC98CZJy2LTms-IwDlM`,
+      `hello&target=it&key=${process.env.REACT_APP_API_KEY}`,
       {}
     ).then((res) => {
-      console.log(res.data);
+      console.log(res);
     });
-  }, [word]);
+  }, []);
 
   return (
     <div className="translate_container">
       <h3>Translator</h3>
-      <input type="search" placeholder="Search.." onChange={handleInput} />
+      <input type="search" />
       <div className="selector">
         <Select
           className="translate_select"
           style={{ width: 240 }}
           defaultValue="Choose A Language"
           onChange={handleChange}
-          options={TranslateLanguages}
         ></Select>
       </div>
-      <h1>Text here</h1>
     </div>
   );
 };

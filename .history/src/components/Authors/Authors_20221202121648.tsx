@@ -1,21 +1,26 @@
 import React, { useState } from "react";
-import { AuthorsList } from "../../Utilities/utility";
+import {
+  AuthorsList,
+  QuoteTexts,
+  TranslateLanguages,
+} from "../../Utilities/utility";
 import { Select } from "antd";
+import { AUTHOR_ONE } from "../../constants/dictionary";
 import "../Authors/Authors.css";
 
 export const Authors = () => {
   const [author, setAuthor] = useState("");
   const handleChange = (value: string) => {
+    console.log(`selected ${value}`);
     setAuthor(value);
   };
   return (
     <div className="container">
-      <h1>Select An Author!!</h1>
       <div className="select">
         <Select
           className="translate_select"
           style={{ width: 240 }}
-          defaultValue="Select"
+          defaultValue="Choose A Language"
           onChange={handleChange}
           options={AuthorsList}
         ></Select>

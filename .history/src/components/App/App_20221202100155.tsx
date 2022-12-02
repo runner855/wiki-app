@@ -6,8 +6,8 @@ import { Search } from "../Search/Search";
 import { Translate } from "../Translate/Translate";
 import "./App.css";
 import { Authors } from "../Authors/Authors";
-
-const App = () => {
+console.log(process.env.TZ);
+function App() {
   return (
     <div className="App">
       <h1>Wiki App</h1>
@@ -21,6 +21,6 @@ const App = () => {
       </Routes>
     </div>
   );
-};
+}
 
 export default App;

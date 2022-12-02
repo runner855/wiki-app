@@ -1,17 +1,15 @@
 import { Select } from "antd";
 import React, { useEffect, useState } from "react";
 import TranslateCall from "../../SearchApi/TranslateCall";
-import { TranslateLanguages } from "../../Utilities/utility";
 import "../Translate/Translate.css";
 
 export const Translate = () => {
   const [word, setWord] = useState<string>("");
-  const [selectedLanguage, setSelectedLanguage] = useState("");
+  const [results, setResults] = useState("");
 
   const handleChange = (value: string) => {
-    // console.log(`selected ${value}`);
-    setSelectedLanguage(value);
-    console.log(selectedLanguage);
+    console.log(`selected ${value}`);
+    // console.log("word", word);
   };
 
   const handleInput = (e: {
@@ -22,12 +20,12 @@ export const Translate = () => {
 
   useEffect(() => {
     TranslateCall.get(
-      `${word}&target=it&key=AIzaSyCHUCmpR7cT_yDFHC98CZJy2LTms-IwDlM`,
+      `hello&target=it&key=AIzaSyCHUCmpR7cT_yDFHC98CZJy2LTms-IwDlM`,
       {}
     ).then((res) => {
       console.log(res.data);
     });
-  }, [word]);
+  }, []);
 
   return (
     <div className="translate_container">
@@ -39,7 +37,29 @@ export const Translate = () => {
           style={{ width: 240 }}
           defaultValue="Choose A Language"
           onChange={handleChange}
-          options={TranslateLanguages}
+          options={[
+            {
+              value: "it",
+              label: "Italiano",
+            },
+            {
+              value: "en",
+              label: "English",
+            },
+
+            {
+              value: "af",
+              label: "African",
+            },
+            {
+              value: "ar",
+              label: "Arabic",
+            },
+            {
+              value: "hi",
+              label: "Hindi",
+            },
+          ]}
         ></Select>
       </div>
       <h1>Text here</h1>

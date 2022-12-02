@@ -1,7 +1,6 @@
 import { Select } from "antd";
 import React, { useEffect, useState } from "react";
 import TranslateCall from "../../SearchApi/TranslateCall";
-import { TranslateLanguages } from "../../Utilities/utility";
 import "../Translate/Translate.css";
 
 export const Translate = () => {
@@ -18,11 +17,12 @@ export const Translate = () => {
     target: { value: React.SetStateAction<string> };
   }) => {
     setWord(e.target.value);
+    console.log(word);
   };
 
   useEffect(() => {
     TranslateCall.get(
-      `${word}&target=it&key=AIzaSyCHUCmpR7cT_yDFHC98CZJy2LTms-IwDlM`,
+      `${word}&target=${value}&key=AIzaSyCHUCmpR7cT_yDFHC98CZJy2LTms-IwDlM`,
       {}
     ).then((res) => {
       console.log(res.data);
@@ -39,7 +39,29 @@ export const Translate = () => {
           style={{ width: 240 }}
           defaultValue="Choose A Language"
           onChange={handleChange}
-          options={TranslateLanguages}
+          options={[
+            {
+              value: "it",
+              label: "Italiano",
+            },
+            {
+              value: "en",
+              label: "English",
+            },
+
+            {
+              value: "af",
+              label: "African",
+            },
+            {
+              value: "ar",
+              label: "Arabic",
+            },
+            {
+              value: "hi",
+              label: "Hindi",
+            },
+          ]}
         ></Select>
       </div>
       <h1>Text here</h1>

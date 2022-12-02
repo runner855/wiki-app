@@ -1,7 +1,6 @@
 import { Select } from "antd";
 import React, { useEffect, useState } from "react";
 import TranslateCall from "../../SearchApi/TranslateCall";
-import { TranslateLanguages } from "../../Utilities/utility";
 import "../Translate/Translate.css";
 
 export const Translate = () => {
@@ -9,9 +8,7 @@ export const Translate = () => {
   const [selectedLanguage, setSelectedLanguage] = useState("");
 
   const handleChange = (value: string) => {
-    // console.log(`selected ${value}`);
-    setSelectedLanguage(value);
-    console.log(selectedLanguage);
+    console.log(`selected ${value}`);
   };
 
   const handleInput = (e: {
@@ -39,7 +36,29 @@ export const Translate = () => {
           style={{ width: 240 }}
           defaultValue="Choose A Language"
           onChange={handleChange}
-          options={TranslateLanguages}
+          options={[
+            {
+              value: "it",
+              label: "Italiano",
+            },
+            {
+              value: "en",
+              label: "English",
+            },
+
+            {
+              value: "af",
+              label: "African",
+            },
+            {
+              value: "ar",
+              label: "Arabic",
+            },
+            {
+              value: "hi",
+              label: "Hindi",
+            },
+          ]}
         ></Select>
       </div>
       <h1>Text here</h1>

@@ -1,0 +1,7 @@
+.container {
+  margin: 5em 0em 0em 7em;
+}
+
+select:focus {
+  outline: none !important;
+}

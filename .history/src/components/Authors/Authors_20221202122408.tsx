@@ -15,7 +15,7 @@ export const Authors = () => {
         <Select
           className="translate_select"
           style={{ width: 240 }}
-          defaultValue="Select"
+          defaultValue="Choose A Language"
           onChange={handleChange}
           options={AuthorsList}
         ></Select>

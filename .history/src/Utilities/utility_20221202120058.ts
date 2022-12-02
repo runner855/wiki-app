@@ -77,11 +77,5 @@ export const NavElements =
         },
       
     ]
-
-    export const AuthorsList = [
-      {value:"Mahatma Gandhi", label:"Mahatma Gandhi"},
-      {value: "Oscar Wilde", label:"Oscar Wilde"},
-      {value: "J.K. Rowling", label: "J.K. Rowling"}
-    ]
     
   
