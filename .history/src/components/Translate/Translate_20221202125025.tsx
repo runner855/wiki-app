@@ -7,7 +7,6 @@ import "../Translate/Translate.css";
 export const Translate = () => {
   const [word, setWord] = useState<string>("");
   const [translate, setTranslate] = useState<string>("");
-  const [result, setResult] = useState<string>("");
 
   const handleChange = (value: string) => {
     // console.log(`selected ${value}`);
@@ -24,8 +23,7 @@ export const Translate = () => {
       `${word}&target=it&key=AIzaSyCHUCmpR7cT_yDFHC98CZJy2LTms-IwDlM`,
       {}
     ).then((res) => {
-      setResult(res.data.data.translations);
-      console.log(result);
+      console.log(res.data);
     });
   }, [word]);
 

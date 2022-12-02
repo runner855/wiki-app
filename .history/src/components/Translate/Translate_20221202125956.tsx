@@ -24,7 +24,7 @@ export const Translate = () => {
       `${word}&target=it&key=AIzaSyCHUCmpR7cT_yDFHC98CZJy2LTms-IwDlM`,
       {}
     ).then((res) => {
-      setResult(res.data.data.translations);
+      setResult(res.data.data.translations[0].translatedText.translatedText);
       console.log(result);
     });
   }, [word]);

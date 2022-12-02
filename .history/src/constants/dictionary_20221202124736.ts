@@ -81,8 +81,8 @@ export const AUTHOR_THREE: Label = {
 }
 
 export const SEARCH_PAGE_TITLE: Label = {
-    en: "Search...",
-    it: "Cerca..."
+    en: "Search",
+    it: "Cerca"
 }
 
 

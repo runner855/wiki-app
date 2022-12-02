@@ -11,6 +11,8 @@ export const Translate = () => {
 
   const handleChange = (value: string) => {
     // console.log(`selected ${value}`);
+    setTranslate(value);
+    console.log(translate);
   };
 
   const handleInput = (e: {
@@ -21,11 +23,10 @@ export const Translate = () => {
 
   useEffect(() => {
     TranslateCall.get(
-      `${word}&target=it&key=AIzaSyCHUCmpR7cT_yDFHC98CZJy2LTms-IwDlM`,
+      `${word}&target=${translate}&key=AIzaSyCHUCmpR7cT_yDFHC98CZJy2LTms-IwDlM`,
       {}
     ).then((res) => {
       setResult(res.data.data.translations);
-      console.log(result);
     });
   }, [word]);
 

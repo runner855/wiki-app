@@ -4,6 +4,10 @@ import TranslateCall from "../../SearchApi/TranslateCall";
 import { TranslateLanguages } from "../../Utilities/utility";
 import "../Translate/Translate.css";
 
+console.log(process.env);
+const key = process.env.REACT_APP_API_KEY;
+console.log(key);
+
 export const Translate = () => {
   const [word, setWord] = useState<string>("");
   const [translate, setTranslate] = useState<string>("");

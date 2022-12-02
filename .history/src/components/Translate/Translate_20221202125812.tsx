@@ -21,10 +21,10 @@ export const Translate = () => {
 
   useEffect(() => {
     TranslateCall.get(
-      `${word}&target=it&key=AIzaSyCHUCmpR7cT_yDFHC98CZJy2LTms-IwDlM`,
+      `${word}&target=${translate}&key=AIzaSyCHUCmpR7cT_yDFHC98CZJy2LTms-IwDlM`,
       {}
     ).then((res) => {
-      setResult(res.data.data.translations);
+      setResult(res.data.data);
       console.log(result);
     });
   }, [word]);
