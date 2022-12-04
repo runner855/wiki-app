@@ -2,13 +2,8 @@ import React, { useState } from "react";
 import { AuthorsList } from "../../Utilities/utility";
 import { Select } from "antd";
 import "../Authors/Authors.css";
-import { LanguageEnum } from "../../types/Apptypes";
 
-type AuthorsProps = {
-  languages: LanguageEnum;
-};
-
-export const Authors = ({ languages }: AuthorsProps) => {
+export const Authors = () => {
   const [author, setAuthor] = useState("");
 
   return (

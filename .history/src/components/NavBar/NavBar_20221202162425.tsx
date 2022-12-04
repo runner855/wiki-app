@@ -8,10 +8,9 @@ import { ENGLISH_LABEL, ITALIAN_LABEL } from "../../constants/dictionary";
 
 type NavBarProps = {
   languages: LanguageEnum;
-  setLanguages: (languages: LanguageEnum) => void;
 };
 
-export const NavBar = ({ languages, setLanguages }: NavBarProps) => {
+export const NavBar = ({ languages }: NavBarProps) => {
   return (
     <ul className="nav_container">
       {NavElements.map((item, index) => {
@@ -22,17 +21,9 @@ export const NavBar = ({ languages, setLanguages }: NavBarProps) => {
         );
       })}
       <div className="switch">
-        {ITALIAN_LABEL[languages]}
-        <Switch
-          defaultChecked
-          onChange={() =>
-            setLanguages(
-              languages === LanguageEnum.EN ? LanguageEnum.IT : LanguageEnum.EN
-            )
-          }
-          className="switch_element"
-        />
         {ENGLISH_LABEL[languages]}
+        <Switch defaultChecked onChange={onChange} className="switch_element" />
+        {ITALIAN_LABEL[languages]}
       </div>
     </ul>
   );

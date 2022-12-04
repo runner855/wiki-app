@@ -22,7 +22,7 @@ export const NavBar = ({ languages, setLanguages }: NavBarProps) => {
         );
       })}
       <div className="switch">
-        {ITALIAN_LABEL[languages]}
+        {ENGLISH_LABEL[languages]}
         <Switch
           defaultChecked
           onChange={() =>
@@ -32,7 +32,7 @@ export const NavBar = ({ languages, setLanguages }: NavBarProps) => {
           }
           className="switch_element"
         />
-        {ENGLISH_LABEL[languages]}
+        {ITALIAN_LABEL[languages]}
       </div>
     </ul>
   );

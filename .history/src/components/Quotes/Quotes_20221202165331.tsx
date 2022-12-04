@@ -8,14 +8,14 @@ export const Quotes = () => {
 
   return (
     <div className="quotes_container">
-      <Collapse>
+      <Collapse defaultActiveKey={index}>
         {QuoteTexts.map((item, index) => {
           return (
             <Panel header={item.quote_title.en} key={index}>
               <p className="quote_text">{item.quote_content}</p>
               <img
                 className="author_image"
-                src={item.author_image}
+                src={item.author_image.en}
                 alt="author_image"
               />
             </Panel>

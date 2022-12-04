@@ -4,14 +4,12 @@ import { NavElements } from "../../Utilities/utility";
 import "../NavBar/NavBar.css";
 import { Switch } from "antd";
 import { LanguageEnum } from "../../types/Apptypes";
-import { ENGLISH_LABEL, ITALIAN_LABEL } from "../../constants/dictionary";
 
 type NavBarProps = {
   languages: LanguageEnum;
-  setLanguages: (languages: LanguageEnum) => void;
 };
 
-export const NavBar = ({ languages, setLanguages }: NavBarProps) => {
+export const NavBar = ({ languages }: NavBarProps) => {
   return (
     <ul className="nav_container">
       {NavElements.map((item, index) => {
@@ -22,17 +20,9 @@ export const NavBar = ({ languages, setLanguages }: NavBarProps) => {
         );
       })}
       <div className="switch">
-        {ITALIAN_LABEL[languages]}
-        <Switch
-          defaultChecked
-          onChange={() =>
-            setLanguages(
-              languages === LanguageEnum.EN ? LanguageEnum.IT : LanguageEnum.EN
-            )
-          }
-          className="switch_element"
-        />
-        {ENGLISH_LABEL[languages]}
+        {LanguageEnum.IT}
+        <Switch defaultChecked onChange={onChange} className="switch_element" />
+        {LanguageEnum.EN}
       </div>
     </ul>
   );

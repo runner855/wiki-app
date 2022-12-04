@@ -15,7 +15,7 @@ export const Quotes = () => {
               <p className="quote_text">{item.quote_content}</p>
               <img
                 className="author_image"
-                src={item.author_image}
+                src={item.author_image.en}
                 alt="author_image"
               />
             </Panel>

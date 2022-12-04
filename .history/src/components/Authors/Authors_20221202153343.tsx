@@ -2,13 +2,8 @@ import React, { useState } from "react";
 import { AuthorsList } from "../../Utilities/utility";
 import { Select } from "antd";
 import "../Authors/Authors.css";
-import { LanguageEnum } from "../../types/Apptypes";
 
-type AuthorsProps = {
-  languages: LanguageEnum;
-};
-
-export const Authors = ({ languages }: AuthorsProps) => {
+export const Authors = () => {
   const [author, setAuthor] = useState("");
 
   return (
@@ -19,10 +14,10 @@ export const Authors = ({ languages }: AuthorsProps) => {
           className="translate_select"
           style={{ width: 240 }}
           defaultValue="Select"
-          onChange={(value) => {
+          onChange={() => {
             setAuthor(value);
           }}
-          options={AuthorsList(languages)}
+          options={AuthorsList}
         ></Select>
       </div>
       <div>

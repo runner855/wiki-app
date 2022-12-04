@@ -5,6 +5,8 @@ import "../NavBar/NavBar.css";
 import { Switch } from "antd";
 import { LanguageEnum } from "../../types/Apptypes";
 import { ENGLISH_LABEL, ITALIAN_LABEL } from "../../constants/dictionary";
+import { languages } from "../../../.history/src/types/Apptypes_20221129171318";
+import { LanguageEnum } from "../../../.history/src/types/Apptypes_20221202155148";
 
 type NavBarProps = {
   languages: LanguageEnum;
@@ -22,17 +24,9 @@ export const NavBar = ({ languages, setLanguages }: NavBarProps) => {
         );
       })}
       <div className="switch">
-        {ITALIAN_LABEL[languages]}
-        <Switch
-          defaultChecked
-          onChange={() =>
-            setLanguages(
-              languages === LanguageEnum.EN ? LanguageEnum.IT : LanguageEnum.EN
-            )
-          }
-          className="switch_element"
-        />
         {ENGLISH_LABEL[languages]}
+        <Switch defaultChecked onChange={onChange} className="switch_element" />
+        {ITALIAN_LABEL[languages]}
       </div>
     </ul>
   );

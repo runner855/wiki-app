@@ -1,16 +1,4 @@
-import { Label } from "../types/Apptypes"
-
-export const ITALIAN_LABEL: Label = {
-    en:"Italian",
-    it:"Italiano"
-
-}
-
-export const ENGLISH_LABEL: Label = {
-    en:"English",
-    it:"Inglese"
-
-}
+import { Label, LanguageEnum } from "../types/Apptypes"
 
 export const QUOTES_LABEL: Label = {
     en: "Quotes",
@@ -62,6 +50,20 @@ export const QUOTE_TITLE_THREE: Label = {
     it:"Citazione Tre"
 }
 
+export const QUOTE_IMAGE_ONE: Label = {
+    en:"https://images.gr-assets.com/authors/1356810912p2/5810891.jpg",
+    it:"https://images.gr-assets.com/authors/1356810912p2/5810891.jpg"
+}
+
+export const QUOTE_IMAGE_TWO: Label = {
+    en:"https://images.gr-assets.com/authors/1521044377p2/3565.jpg",
+    it:"https://images.gr-assets.com/authors/1521044377p2/3565.jpg"
+}
+
+export const QUOTE_IMAGE_THREE: Label = {
+    en:"https://images.gr-assets.com/authors/1596216614p2/1077326.jpg",
+    it:"https://images.gr-assets.com/authors/1596216614p2/1077326.jpg"
+}
 
 export const AUTHOR_ONE: Label = {
     en:"Mahatma Gandhi",

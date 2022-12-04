@@ -1,4 +1,5 @@
-import { AppUrls, LanguageEnum } from "../types/Apptypes";
+import { AppUrls, languages } from "../types/Apptypes";
+import { LanguageEnum } from '../../.history/src/types/Apptypes_20221202153927';
 import { 
   QUOTES_LABEL, 
   TRANSLATE_LABEL,
@@ -10,6 +11,9 @@ import {
   QUOTE_TITLE_ONE, 
   QUOTE_TITLE_TWO, 
   QUOTE_TITLE_THREE,
+  QUOTE_IMAGE_ONE,
+  QUOTE_IMAGE_TWO,
+  QUOTE_IMAGE_THREE,
   AUTHOR_ONE,
   AUTHOR_TWO,
   AUTHOR_THREE
@@ -30,20 +34,20 @@ export const NavElements =
     export const QuoteTexts = [
       {
         quote_title: QUOTE_TITLE_ONE,
-        quote_content: QUOTE_CONTENT_ONE, 
-        author_image:"https://images.gr-assets.com/authors/1356810912p2/5810891.jpg",
+        quote_content: QUOTE_CONTENT_ONE.en, 
+        author_image:QUOTE_IMAGE_ONE,
         author_name:AUTHOR_ONE
       },
       {
         quote_title: QUOTE_TITLE_TWO,
-        quote_content: QUOTE_CONTENT_TWO , 
-        author_image: "https://images.gr-assets.com/authors/1521044377p2/3565.jpg",
+        quote_content: QUOTE_CONTENT_TWO.en , 
+        author_image: QUOTE_IMAGE_TWO,
         author_name: AUTHOR_TWO
       },
       {
         quote_title: QUOTE_TITLE_THREE,
-        quote_content: QUOTE_CONTENT_THREE, 
-        author_image: "https://images.gr-assets.com/authors/1596216614p2/1077326.jpg",
+        quote_content: QUOTE_CONTENT_THREE.en, 
+        author_image: QUOTE_IMAGE_THREE,
         author_name: AUTHOR_THREE 
       }
     ]
@@ -75,11 +79,11 @@ export const NavElements =
       
     ]
 
-    export const AuthorsList = (languages: LanguageEnum) => [
+    export const AuthorsList = (languages: LanguageEnum) => {[
       {value:AUTHOR_ONE[languages], label:AUTHOR_ONE[languages]},
       {value: AUTHOR_TWO[languages], label:AUTHOR_TWO[languages]},
       {value: AUTHOR_THREE[languages], label: AUTHOR_THREE[languages]}
-    ];
+    ]}
      
     
     

@@ -20,10 +20,7 @@ export const App = () => {
       <Routes>
         <Route path="/" element={<Navigate to={AppUrls.QUOTES} />} />
         <Route path={AppUrls.QUOTES} element={<Quotes />} />
-        <Route
-          path={AppUrls.AUTHORS}
-          element={<Authors languages={languages} />}
-        />
+        <Route path={AppUrls.AUTHORS} element={<Authors />} />
         <Route path={AppUrls.SEARCH} element={<Search />} />
         <Route path={AppUrls.TRANSLATE} element={<Translate />} />
       </Routes>

@@ -7,8 +7,8 @@ export enum AppUrls  {
 }
 
 export enum  LanguageEnum {
-    IT = "it",
-    EN = "en"
+    IT = "IT",
+    EN = "EN"
 }
 
 

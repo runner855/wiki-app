@@ -1,4 +1,4 @@
-import { Label } from "../types/Apptypes"
+import { Label, LanguageEnum } from "../types/Apptypes"
 
 export const ITALIAN_LABEL: Label = {
     en:"Italian",
