@@ -27,7 +27,6 @@ export const Search = () => {
       InputValue.length >= 2 && setWikiData(res.data.query.search);
     });
   }, [InputValue]);
-
   return (
     <div className="data_container">
       <div className="title">{SEARCH_PAGE_TITLE.en}</div>
