@@ -2,8 +2,13 @@ import React from "react";
 import { Collapse } from "antd";
 import { QuoteTexts } from "../../Utilities/utility";
 import "../Quotes/Quotes.css";
+import { LanguageEnum } from "../../types/Apptypes";
 
-export const Quotes = () => {
+type QuotesProps = {
+  languages: LanguageEnum;
+};
+
+export const Quotes = ({ languages }: QuotesProps) => {
   const { Panel } = Collapse;
   return (
     <div className="quotes_container">
@@ -11,7 +16,7 @@ export const Quotes = () => {
         {QuoteTexts.map((item, index) => {
           return (
             <Panel header={item.quote_title.en} key={index}>
-              <p className="quote_text">{item.quote_content.en}</p>
+              <p className="quote_text">{item.quote_content[languages]}</p>
               <img
                 className="author_image"
                 src={item.author_image}

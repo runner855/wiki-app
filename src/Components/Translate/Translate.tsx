@@ -7,92 +7,47 @@ import "../Translate/Translate.css";
 type ResultProps = {
   translatedText: string;
   detectedSourceLanguage: string;
+  value: string | undefined;
+  translations: [];
 };
 
 export const Translate = () => {
   const [word, setWord] = useState<string>("");
-  const [translate, setTranslate] = useState<string>("");
   const [result, setResult] = useState<ResultProps[]>();
-
-  const handleChange = (value: string) => {
-    console.log(`selected ${value}`);
-  };
-
-  const handleInput = (e: {
-    target: { value: React.SetStateAction<string> };
-  }) => {
-    setWord(e.target.value);
-  };
+  const [value, setValue] = useState<string>("en");
 
   useEffect(() => {
     TranslateCall.get(
-      `${word}&target=it&key=AIzaSyCHUCmpR7cT_yDFHC98CZJy2LTms-IwDlM`,
+      `v2?q=${word}&target=${value}&key=${process.env.REACT_APP_API_KEY}`,
       {}
     ).then((res) => {
-      setResult(res.data.data);
+      setResult(res.data.data.translations);
     });
-  }, [word]);
+  }, [word, value]);
+
   return (
     <div className="translate_container">
       <h3>Translator</h3>
-      <input type="search" placeholder="Search.." onChange={handleInput} />
+      <input
+        type="search"
+        placeholder="Search.."
+        onChange={(e) => setWord(e.target.value)}
+      />
       <div className="selector">
         <Select
           className="translate_select"
           style={{ width: 240 }}
-          defaultValue="Choose A Language"
-          onChange={handleChange}
+          defaultValue={TranslateLanguages[1].value}
+          onChange={() => setValue(value)}
           options={TranslateLanguages}
         ></Select>
       </div>
-      <div className="data">Text to display</div>
+      <h1>
+        {result &&
+          result.map((item, index) => {
+            return <span key={index}>{item.translatedText}</span>;
+          })}
+      </h1>
     </div>
   );
 };
-
-// type ResultProps = {
-//   translatedText: string;
-//   detectedSourceLanguage: string;
-// };
-
-// export const Translate = () => {
-//   const [word, setWord] = useState<string>("");
-//   const [translate, setTranslate] = useState<string>("");
-//   const [result, setResult] = useState<ResultProps[]>();
-
-//   const handleChange = (value: string) => {
-//     console.log(`selected ${value}`);
-//   };
-
-//   const handleInput = (e: {
-//     target: { value: React.SetStateAction<string> };
-//   }) => {
-//     setWord(e.target.value);
-//   };
-
-//   useEffect(() => {
-//     TranslateCall.get(
-//       `${word}&target=it&key=AIzaSyCHUCmpR7cT_yDFHC98CZJy2LTms-IwDlM`,
-//       {}
-//     ).then((res) => {
-//       setResult(res.data.data);
-//     });
-//   }, [word]);
-
-//   return (
-//     <div className="translate_container">
-//       <h3>Translator</h3>
-//       <input type="search" placeholder="Search.." onChange={handleInput} />
-//       <div className="selector">
-//         <Select
-//           className="translate_select"
-//           style={{ width: 240 }}
-//           defaultValue="Choose A Language"
-//           onChange={handleChange}
-//           options={TranslateLanguages}
-//         ></Select>
-//       </div>
-//       <div className="data">Text to display</div>
-//     </div>
-//   );
-// };
